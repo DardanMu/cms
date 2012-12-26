@@ -1,0 +1,6 @@
+TODO:
+
+- create the Edit/Delete area.
+- php Pagination
+- title link goes to that post only (or "read more..." link)
+- redesign the site, make it look nice
