@@ -1,13 +1,13 @@
 <?php
 session_start();
-	if ($_SESSION['username']==""){
+	if ($_SESSION['loggedIn']==false){
 	header('Location: failed.php');
 	exit();
 	}
 $userno=$_SESSION['userno'];
 $username=$_SESSION['username'];
 
-include "../resources/adminlayout.php";
+include "resources/adminlayout.php";
 
 pageTop("Student Feedback System");
 pageStart("Admin Control Panel");

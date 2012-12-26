@@ -1,5 +1,12 @@
 <?php
-include "resources/layout.php";
+session_start();
+
+	if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
+		include "admin/resources/adminlayout.php";
+	} else{
+		include "resources/layout.php";
+	}
+
 include "resources/database.php";
 
 pageTop("CMS");
@@ -16,11 +23,8 @@ if(isset($_GET['post_id'])){
 
 <?php pageFinish(); ?>
 
-<div id="footer">
-	<a href="mainfeedback.html">Main page</a>
-	<a href="givefeedback.php">Provide Feedback</a>
-	<a href="results.php">See Results</a>
-	<a href="resources/css/styles.css">FAQ</a>
-</div>
+<footer>
+<p>&copy MySite 2013 </p>
+</footer>
 
 <?php pageBottom(); ?>

@@ -34,7 +34,7 @@ print('</div>');
 print'
 <div id="leftmenu">
 	<a href="/cms/index.php">Main page</a>
-	<a href="admin/login.php">log in</a>
+	<a href="/cms/admin/login.php">log in</a>
 </div>';
 
 print('<div id="newsfeed">');

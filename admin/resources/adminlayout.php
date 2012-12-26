@@ -11,8 +11,8 @@ print('<html>');
 print('<head>');
 print('<link rel="stylesheet" href="resources/styles.css" type="text/css"> ');
 print('		<style type="text/css" media="all"> ');
-print('			@import "../resources/css/styles.css";');
-print('			@import("../resources/css/styles.css");');
+print('			@import "resources/css/styles.css";');
+print('			@import("resources/css/styles.css");');
 print('		</style>');
 print "<title>$pageTitle</title>";
 print('<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">');
@@ -33,10 +33,11 @@ print('</div>');
 
 print'
 <div id="leftmenu">
-	<a href="admin.php">Admin home</a>
-	<a href="../admin/logout.php">log out</a>
-	<a href="insert.php">Add new content</a>
-	<a href="edit.php">Edit/Delete content</a>
+	<a href="/cms/admin/index.php">Admin home</a>
+	<a href="/cms/admin/logout.php">log out</a>
+	<a href="/cms/admin/insert.php">Add new content</a>
+	<a href="/cms/admin/edit.php">Edit/Delete content</a>
+	<a href="/cms/index.php">View all posts</a>
 </div>';
 
 print('<div id="newsfeed">');

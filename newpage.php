@@ -3,7 +3,7 @@ include "resources/layout.php";
 include "resources/database.php";
 
 pageTop("New page title");
-pageStart("New page heading");?>
+pageStart("New page Banner heading");?>
 
 
 <!-- New content goes here -->

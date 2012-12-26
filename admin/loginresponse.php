@@ -20,7 +20,8 @@ $row1 = mysql_fetch_array($result1);
 	session_start();
 		$_SESSION['userno']=$row1['userno'];
 		$_SESSION['username']=strtolower($username);
-		header('Location: admin.php');
+		$_SESSION["loggedIn"] = true;
+		header('Location: index.php');
 		exit();
 		
 ?>

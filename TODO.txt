@@ -1,6 +1,7 @@
 TODO:
 
-- create the Edit/Delete area.
+- create the Edit area.
 - php Pagination
 - title link goes to that post only (or "read more..." link)
 - redesign the site, make it look nice
+-TEST Jgardening site with this cms to see if it can be exported to other sites using their own html css etc. Make a new page called newsfeed there with the same template format the Jgardening site has, and print_contents() in the html to display posts from a database. 

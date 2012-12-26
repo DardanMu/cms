@@ -16,12 +16,12 @@ function print_content($post_id = ''){
 	if(mysql_num_rows($result) != 0) {
     
 		while ($line = mysql_fetch_array($result)) {
-			print "<div class='newsItem'>";
-			print "<h1><a href='index.php?post_id=".$line['post_id']."'>".$line['title']."</a></h1>";
-			print "<p>".$line['content']."</p>";
-			print "<small>Posted: ".$line['date']."</small>";
-			print "<br>";
-			print "</div>";
+			print "<div class='newsItem'>
+				<h1><a href='index.php?post_id=".$line['post_id']."'>".$line['title']."</a></h1>
+				<p>".$line['content']."</p>
+				<small>Posted: ".$line['date']."</small>
+				<br>
+				</div>";
 		};
 	}else {
 		print "<h2>Opps, that post does not exist :( </h2>";

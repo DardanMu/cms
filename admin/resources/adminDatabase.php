@@ -4,19 +4,19 @@ function manage_content(){
 
 $result = queryDatabase("SELECT * FROM newsfeed ORDER BY post_id DESC");
 
-if($result === FALSE) {
-    die(mysql_error()); 
-}else {
+	if($result === FALSE) {
+		die(mysql_error()); 
+	}else {
 
-while ($line = mysql_fetch_array($result)) {
-print "<div class='newsItem'>";
-print "<h1>".$line['title']."</h1>";
-print "<small>Posted: ".$line['date']."</small>";
-print "<p> <a href='#'>Edit</a> | <a href='?post_id=".$line['post_id']."'>Delete</a></p>";
-print "<br>";
-print "</div>";
-};
-}
+		while ($line = mysql_fetch_array($result)) {
+		print "<div class='newsItem'>
+			<h1>".$line['title']."</h1>
+			<small>Posted: ".$line['date']."</small>
+			<p> <a href='#'>Edit</a> | <a href='?post_id=".$line['post_id']."'>Delete</a></p>
+			<br>
+			</div>";
+		};
+	}
 }
 
 function delete_content($post_id){
