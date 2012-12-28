@@ -1,16 +1,23 @@
 body {
 	font-family: Geneva, Arial, Helvetica, sans-serif;
 	font-size: 12px;
-	background-color: #666;
-	margin: 0;
-	padding: 5%;
+	background:#f7f7f7 url(../img/pattern.png) repeat top left;
 }
 
-div#banner {
+#container{
+
+	background-color: #FFFFFF;
+	opacity:0.9;
+	text-align: left;
+	width: 100%;
+	min-height:500px;
+}
+#banner {
 	clear:both;
 	text-align: center;
 	border: 1px none #050400;
 	background: #4c4c4c;
+	opacity:0.9;
 	width: 100%;
 	margin-bottom: 0;
 	padding-bottom: 0;
@@ -54,9 +61,8 @@ div#banner h3 {
 	border-bottom: solid #a2131d 5px;
 }
 
-div#leftsidebar {
+div#leftmenu {
 float:left;
-clear:left;
 background: transparent;
 	border-style: none;
 	width: 18%;
@@ -64,7 +70,7 @@ background: transparent;
 	margin-bottom: 1px;
 }
 
-div#leftsidebar a {
+div#leftmenu a {
 	list-style: none;
 	color: #000;
 	text-decoration: none;
@@ -75,46 +81,12 @@ div#leftsidebar a {
 	margin: 2px;
 }
 
-div#container {
-	float:left;
-	background-color: #FFFFFF;
-	border-style: none;
-	border-top: 20px solid #ffffff;
-	border-left: 20px none #ffffff;
-	border-width: 1px;
-	text-align: left;
-	width: 100%;
-	margin-top: 0;
-	padding-top: 0;
-}
 
-div#main {
-	width:100%;
-	float:left;
-}
 
-div#main h1 {
-	font-size: 16px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
-div#main h2 {
-	font-size: 14px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
-div#main h3 {
-	font-size: 12px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
-div#main p {
-	font-size: 14px;
-	margin-top: 10px;
-	margin-bottom: 10px;
+div#newsfeed {
+	padding-left:19%;
+	padding-bottom:20px;
+	min-height:300px;
 }
 
 div#footer {
@@ -130,9 +102,15 @@ clear:both;
 
 div#footer a {
 	list-style: circle none;
-	color: #ffffff;
+	color: black;
 	margin-right: 14px;
 }
 .newsItem {
 background-color:yellow;
+}
+.newsItem  h1:hover {
+	color:blue;
+}
+form{
+text-align:center;
 }

@@ -16,6 +16,15 @@ print('			@import("resources/css/styles.css");');
 print('		</style>');
 print "<title>$pageTitle</title>";
 print('<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">');
+
+print('<script type="text/javascript" src="resources/jscripts/tiny_mce/tiny_mce.js"></script>');
+print('<script type="text/javascript">
+tinyMCE.init({
+		theme : "advanced",
+        mode : "textareas"
+});
+</script>');
+
 print('</head>');
 print('<body>');
 };
@@ -23,14 +32,15 @@ print('<body>');
 
 function pageStart($pagebanner){
 
-print('<div id="container">');
+
 
 print('<div id="banner">');
 print('<h1>My site</h1>');
-print'<h2>'.$pagebanner.'</h2>';
-print "<h3>Hi there!</h3>";
+print'<h2></h2>';
+print "<h3>".$pagebanner."</h3>";
 print('</div>');
 
+print('<div id="container">');
 print'
 <div id="leftmenu">
 	<a href="/cms/admin/index.php">Admin home</a>

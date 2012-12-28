@@ -13,9 +13,11 @@ pageTop("CMS");
 pageStart("Edit/Delete content");?>
 
 <?php 
-	if(isset($_GET['post_id'])){
-		delete_content($_GET['post_id']);
-	}else{
+	if(isset($_GET['delete'])){
+		delete_content($_GET['delete']);
+	}elseif(isset($_GET['edit'])){
+		edit_content($_GET['edit']);
+	}else	{
 
 manage_content();
 }

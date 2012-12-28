@@ -18,7 +18,7 @@ function print_content($post_id = ''){
 		while ($line = mysql_fetch_array($result)) {
 			print "<div class='newsItem'>
 				<h1><a href='index.php?post_id=".$line['post_id']."'>".$line['title']."</a></h1>
-				<p>".$line['content']."</p>
+				".$line['content']."
 				<small>Posted: ".$line['date']."</small>
 				<br>
 				</div>";

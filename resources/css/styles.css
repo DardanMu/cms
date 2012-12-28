@@ -1,26 +1,56 @@
-body {
+@import url('reset.css');
+
+html, body {
 	font-family: Geneva, Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	background:#f7f7f7 url(../img/pattern.png) repeat top left;
+	/* position: relative; */
+	height:100%;
 }
-
+h1{
+font-size:21px;
+}
+h2{
+font-size:17px;
+}
 #container{
-
-	background-color: #FFFFFF;
-	opacity:0.9;
+/* 	background-color: #FFFFFF;
 	text-align: left;
-	width: 100%;
-	min-height:50px;
+	margin: 0px auto;
+	min-height:300px; */
+	
+		min-height:400px;
+	background-color:#FFFFFF;
+	width: 90%;
+	border-width: 1px; 
+	border-color:rgba(102,102,102,0.7); 
+	/*shadow around the box*/
+	-moz-box-shadow: 0 0 4px 4px #888;
+	-webkit-box-shadow: 0 0 4px 4px#888;
+	box-shadow: 0 0 4px 4px #888;
+	margin:10px auto 20px auto;
+	padding: 0px;
+	/*border*/
+	-webkit-border-bottom-right-radius: 5px;
+-webkit-border-bottom-left-radius: 5px;
+-moz-border-radius-bottomright: 5px;
+-moz-border-radius-bottomleft: 5px;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-bottom-style: solid;
 }
 #banner {
-	clear:both;
+	/* clear:both; */
 	text-align: center;
 	border: 1px none #050400;
 	background: #4c4c4c;
 	opacity:0.9;
-	width: 100%;
-	margin-bottom: 0;
-	padding-bottom: 0;
+	/*width: 100%;*/
+	
+
 }
 
 div#banner h1 {
@@ -29,8 +59,7 @@ div#banner h1 {
 	text-align: left;
 	padding-left: 2%;
 	border-top: 1px none black;
-	padding-bottom: 0;
-	margin-bottom: 2px;
+	height: 60px;
 	font: normal 20px 'Lucida Grande', LucidaGrande, Lucida, Helvetica, Arial, sans-serif;
 }
 
@@ -84,9 +113,10 @@ div#leftmenu a {
 
 
 div#newsfeed {
-	padding-left:19%;
-	padding-bottom:20px;
-	min-height:300px;
+	padding:5px 0px 10px 0px;
+/* 	float:left; */
+	width:60%;
+	margin-left:20%; 
 }
 
 div#footer {
@@ -106,11 +136,20 @@ div#footer a {
 	margin-right: 14px;
 }
 .newsItem {
-background-color:yellow;
+background-color:white;
+margin-bottom:10px;
+padding:5px;
+border-bottom:dotted;
+border-color: red;
+
 }
-.newsItem  h1:hover {
-	color:blue;
+.newsItem  a:hover {
+	color:red;
 }
+.newsItem h1 a{
+font-size:20px;
+}
+
 form{
 text-align:center;
 }

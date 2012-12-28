@@ -23,14 +23,15 @@ print('<body>');
 
 function pageStart($pagebanner){
 
-print('<div id="container">');
+
 
 print('<div id="banner">');
 print('<h1>My site</h1>');
-print'<h2>'.$pagebanner.'</h2>';
-print "<h3>Hi there!</h3>";
+print'<h2></h2>';
+print "<h3>".$pagebanner."</h3>";
 print('</div>');
 
+print('<div id="container">');
 print'
 <div id="leftmenu">
 	<a href="/cms/index.php">Main page</a>

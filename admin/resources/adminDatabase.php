@@ -12,7 +12,7 @@ $result = queryDatabase("SELECT * FROM newsfeed ORDER BY post_id DESC");
 		print "<div class='newsItem'>
 			<h1>".$line['title']."</h1>
 			<small>Posted: ".$line['date']."</small>
-			<p> <a href='#'>Edit</a> | <a href='?post_id=".$line['post_id']."'>Delete</a></p>
+			<p> <a href='?edit=".$line['post_id']."'>Edit</a> | <a href='?delete=".$line['post_id']."'>Delete</a></p>
 			<br>
 			</div>";
 		};
@@ -33,6 +33,36 @@ function delete_content($post_id){
 	}
 	print $backToIndex;
 }
+
+function edit_content($post_id){
+
+	if(!$post_id){
+		return false;
+	}else {
+		$post_id = mysql_real_escape_string($post_id);
+			$queryString = "SELECT * FROM newsfeed WHERE post_id = ".$post_id."";
+			
+			$result = queryDatabase($queryString) or die(mysql_error());
+			$line = mysql_fetch_array($result);
+		//print form out here
+		
+		print '<form name="editForm" action="editresponse.php" method="POST">';
+			print '<h1>Title:</h1>';
+			print '<p><input name="titleEdit" type="text" value="'.$line['title'].'"></p>';
+			print'<br>';
+			print '<h1>Content:</h1>';
+			print '<p><textarea name="contentEdit" rows="6" cols="50">'.$line['content'].'</textarea></p>';
+			print '<p>Post ID: '.$line['post_id'].'<input name="post_id" type="hidden" value="'.$line['post_id'].'""></p>';
+			print '<p><input type="submit" name="submit" value="Update"> | <input type="submit" name="cancel" value="Cancel"></p>';
+		
+		print '</form>';
+	
+	}
+
+
+
+}
+
 
 function queryDatabase($queryString)
 {
