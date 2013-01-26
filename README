@@ -7,6 +7,7 @@ The markup and design is seperate from the PHP and it is really easy to implemen
 There is still more work to be done to this, and I will be updating it accordingly. 
 
 TODO:
+-hash passwords
 -Use an MVC system
 -Make the PHP Object-Oriented
 -Various small changes
