@@ -1,16 +1,17 @@
-This is a custom CMS written in PHP and uses the MySQL database.
+This is a custom CMS written in PHP and uses a MySQL database.
 
-There are two parts to this cms, a public area of the site and a private admin only area, to edit and delete posts. 
+There are two parts to this cms, a public area of the site and a private admin only area, to edit, delete, and insert posts. 
 
-The markup and design is seperate from the PHP and it is really easy to implement on an existing site. 
+The markup and design is separate from the PHP and it is really easy to implement on an existing site. 
 
 There is still more work to be done to this, and I will be updating it accordingly. 
 
 TODO:
--hash passwords
--Use an MVC system
--Make the PHP Object-Oriented
--Various small changes
+-Pagination
+-Edit the PHP to be more Object-Oriented
+-Change the css and html designs
+-Create 'comment' section
+
 
 
 Feel free to look at the code and message me for any details. 

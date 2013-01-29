@@ -51,9 +51,11 @@ function edit_content($post_id){
 			print '<p><input name="titleEdit" type="text" value="'.$line['title'].'"></p>';
 			print'<br>';
 			print '<h1>Content:</h1>';
-			print '<p><textarea name="contentEdit" rows="6" cols="50">'.$line['content'].'</textarea></p>';
+			print '<p><textarea name="contentEdit" rows="6" cols="50">'.$line['content'].'</textarea> <script>
+                	CKEDITOR.replace( "contentEdit" );
+            	</script></p>';
 			print '<p>Post ID: '.$line['post_id'].'<input name="post_id" type="hidden" value="'.$line['post_id'].'""></p>';
-			print '<p><input type="submit" name="submit" value="Update"> | <input type="submit" name="cancel" value="Cancel"></p>';
+			print '<br><br><p><input type="submit" name="submit" value="Update"> | <input type="submit" name="cancel" value="Cancel"></p>';
 		
 		print '</form>';
 	
@@ -81,7 +83,7 @@ mysql_select_db("cms");
 function useDatabase($queryString)
 {
 //$result is associative array for requested query
-$result = mysql_query ($queryString);
+$result = mysql_query($queryString) or die(mysql_error());
 //Return result - needs to be processed using the 
 return $result;
 

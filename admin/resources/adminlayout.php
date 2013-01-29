@@ -17,7 +17,7 @@ print('		</style>');
 print "<title>$pageTitle</title>";
 print('<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">');
 
-print('<script type="text/javascript" src="resources/jscripts/tiny_mce/tiny_mce.js"></script>');
+print('<script type="text/javascript" src="resources/jscripts/ckeditor/ckeditor.js"></script>');
 print('<script type="text/javascript">
 tinyMCE.init({
 		theme : "advanced",

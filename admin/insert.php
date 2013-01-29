@@ -14,14 +14,23 @@ pageStart("Admin Control Panel");
 ?>
 
 <form name="insert" action="insertresponse.php" method="POST">
-	<h2>Insert a new Post</h2>
+	<h1>Insert a new Post</h1>
 	
 	
-	
+	<br>
 	<p>Post title: <input name="pTitle" type="text"></p>
 	<br>
+	<br>
 	<p>Post Content: </p>
-	<p> <textarea name="pContent" rows="6" cols="50"></textarea> </p>
+		<p> 
+			<textarea name="pContent" rows="6" cols="50"></textarea> 
+				<script>
+                	CKEDITOR.replace( 'pContent' );
+            	</script>
+        </p>
+        <br>
+        <br>
+        <br>
 	<p> <input name="submit" type="submit" value="Post!"></p>
 	
 </form>

@@ -26,10 +26,8 @@ manage_content();
 <?php pageFinish(); ?>
 
 <div id="footer">
-	<a href="mainfeedback.html">Main page</a>
-	<a href="givefeedback.php">Provide Feedback</a>
-	<a href="results.php">See Results</a>
-	<a href="faq.php">FAQ</a>
+	<a href="admin.php">Main page</a>
+	<a href="logout.php">Logout page</a>
 </div>
 
 <?php pageBottom(); ?>

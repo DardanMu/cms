@@ -22,7 +22,8 @@ pageStart("Admin Control Panel");
 <?php
 
 if(isset($_POST['cancel'])){
-	print "Cancelled";
+	header('Location:edit.php');
+	exit();
 }else{
 
 

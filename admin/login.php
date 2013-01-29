@@ -4,7 +4,8 @@ include "../resources/layout.php";
 pageTop("CMS");
 pageStart("Log in to the admin centre");
 ?>
-
+
+
 
 
 <form name="login" id="login" action="loginresponse.php" method="POST">
@@ -15,4 +16,10 @@ pageStart("Log in to the admin centre");
 </form>
 
 
-<?php pageFinish(); ?><div id="footer">	<a href="login.php">Login page</a></div><?php pageBottom(); ?>
+<?php pageFinish(); ?>
+<div id="footer">
+	<a href="login.php">Login page</a>
+</div>
+
+<?php pageBottom(); ?>
+

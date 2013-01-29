@@ -2,9 +2,11 @@
 include "resources/adminDatabase.php";
 
 $username = mysql_real_escape_string($_POST['username']);
-$password = mysql_real_escape_string($_POST['password']);
+$passQuery = mysql_real_escape_string($_POST['password']);
 
-if($username == "" || $password == ""){
+	$password = sha1('%^fs%dldfg@I#3as2h23dg#@4*^&a(*&@#'.$passQuery);
+
+if($username == "" || $passQuery == ""){
 	header('Location:failed.php');
 	exit();
 }
@@ -12,7 +14,7 @@ if($username == "" || $password == ""){
 $result1 = queryDatabase("SELECT * FROM userdetails WHERE username = '".strtolower($username)."'");
 $row1 = mysql_fetch_array($result1);
 		
-		if($password != $row1['password']){
+		if($password != $row1['passwordHash']){
 			header('Location:failed.php');
 			exit();
 		}

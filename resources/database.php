@@ -19,7 +19,7 @@ function print_content($post_id = ''){
 			print "<div class='newsItem'>
 				<h1><a href='index.php?post_id=".$line['post_id']."'>".$line['title']."</a></h1>
 				".$line['content']."
-				<small>Posted: ".$line['date']."</small>
+				<br><small>Posted: ".$line['date']."</small>
 				<br>
 				</div>";
 		};
