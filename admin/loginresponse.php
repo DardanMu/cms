@@ -1,5 +1,6 @@
 <?php
-include "resources/adminDatabase.php";
+include "resources/class.adminDatabase.php";
+	$adminDB = new adminDatabase;
 
 $username = mysql_real_escape_string($_POST['username']);
 $passQuery = mysql_real_escape_string($_POST['password']);
@@ -11,7 +12,7 @@ if($username == "" || $passQuery == ""){
 	exit();
 }
 
-$result1 = queryDatabase("SELECT * FROM userdetails WHERE username = '".strtolower($username)."'");
+$result1 = $adminDB->queryDatabase("SELECT * FROM userdetails WHERE username = '".strtolower($username)."'");
 $row1 = mysql_fetch_array($result1);
 		
 		if($password != $row1['passwordHash']){

@@ -1,8 +1,11 @@
 <?php
+include_once "../resources/class.database.php";
+
+ class adminDatabase extends database{
 
 function manage_content(){
 
-$result = queryDatabase("SELECT * FROM newsfeed ORDER BY post_id DESC");
+$result = $this->queryDatabase("SELECT * FROM newsfeed ORDER BY post_id DESC");
 
 	if($result === FALSE) {
 		die(mysql_error()); 
@@ -27,7 +30,7 @@ function delete_content($post_id){
 		$post_id = mysql_real_escape_string($post_id);
 			$queryString = "DELETE FROM newsfeed WHERE post_id = ".$post_id."";
 			
-		$result = queryDatabase($queryString) or die(mysql_error());
+		$result = $this->queryDatabase($queryString) or die(mysql_error());
 			print "<h2>Post deleted successfully!</h2>";
 			$backToIndex = "<p><a href='edit.php'>Click to go back</a></p>";
 	}
@@ -42,7 +45,7 @@ function edit_content($post_id){
 		$post_id = mysql_real_escape_string($post_id);
 			$queryString = "SELECT * FROM newsfeed WHERE post_id = ".$post_id."";
 			
-			$result = queryDatabase($queryString) or die(mysql_error());
+			$result = $this->queryDatabase($queryString) or die(mysql_error());
 			$line = mysql_fetch_array($result);
 		//print form out here
 		
@@ -65,13 +68,13 @@ function edit_content($post_id){
 
 }
 
-
+/*
 function queryDatabase($queryString)
 {
-openDatabase();
-$result=useDatabase($queryString);
-closeDatabase();
-return $result;
+	openDatabase();
+	$result=useDatabase($queryString);
+	closeDatabase();
+	return $result;
 };
 
 function openDatabase()
@@ -93,6 +96,7 @@ function closeDatabase()
 {
 //close db
 mysql_close();
-};
+};*/
 
+}
 ?>

@@ -13,8 +13,8 @@ $username=$_SESSION['username'];
 	$pContent= mysql_real_escape_string($_POST['contentEdit']);
 	
 include "resources/adminlayout.php";
-include "resources/adminDatabase.php";
-
+include "resources/class.adminDatabase.php";
+	$adminDB = new adminDatabase;
 pageTop("Edit");
 pageStart("Admin Control Panel");
 ?>
@@ -33,7 +33,7 @@ if($pTitle == "" || $pContent == ""){
 }else{
 
 $queryString = "UPDATE newsfeed set title='$pTitle',content='$pContent', date=NOW() WHERE post_id=".($_POST['post_id']);
-queryDatabase($queryString) or die('Query failed: ' . mysql_error());
+$adminDB->queryDatabase($queryString) or die('Query failed: ' . mysql_error());
 
 print "<h2>Successfully Updated!</h2>";	
 

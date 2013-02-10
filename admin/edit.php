@@ -6,7 +6,8 @@ session_start();
 	}
 
 include "resources/adminlayout.php";
-include "resources/adminDatabase.php";
+include "resources/class.adminDatabase.php";
+	$adminDB = new adminDatabase;
 extract($_GET);
 pageTop("CMS");
 
@@ -14,12 +15,12 @@ pageStart("Edit/Delete content");?>
 
 <?php 
 	if(isset($_GET['delete'])){
-		delete_content($_GET['delete']);
+		$adminDB->delete_content($_GET['delete']);
 	}elseif(isset($_GET['edit'])){
-		edit_content($_GET['edit']);
+		$adminDB->edit_content($_GET['edit']);
 	}else	{
 
-manage_content();
+$adminDB->manage_content();
 }
 ?>
 

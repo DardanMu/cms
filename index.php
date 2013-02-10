@@ -7,7 +7,8 @@ session_start();
 		include "resources/layout.php";
 	}
 
-include "resources/database.php";
+include "resources/class.database.php";
+	$userDB = new database;
 
 pageTop("CMS");
 
@@ -15,9 +16,11 @@ pageStart("Welcome...");?>
 
 <?php 
 if(isset($_GET['post_id'])){
-	print_content($_GET['post_id']);
-} else{
-	print_content();
+	$userDB->print_content($_GET['post_id']);
+}elseif (isset($_GET['page'])) {
+	$userDB->print_content($_GET['page']);
+}else{
+	$userDB->print_content();
 }
 ?>
 
