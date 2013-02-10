@@ -12,12 +12,12 @@ p{
 	line-height: normal;
 }
 h1{
-font-size:21px;
+	font-size:21px;
 	margin: 5px;
 	padding: 5px;
 }
 h2{
-font-size:17px;
+	font-size:17px;
 	margin: 3px;
 	padding: 3px;
 }
@@ -28,7 +28,7 @@ font-size:17px;
 	margin: 0px auto;
 	min-height:300px; */
 	
-		min-height:400px;
+	min-height:400px;
 	background-color:#FFFFFF;
 	width: 90%;
 	border-width: 1px; 
@@ -41,11 +41,11 @@ font-size:17px;
 	padding: 0px;
 	/*border*/
 	-webkit-border-bottom-right-radius: 5px;
--webkit-border-bottom-left-radius: 5px;
--moz-border-radius-bottomright: 5px;
--moz-border-radius-bottomleft: 5px;
-border-bottom-right-radius: 5px;
-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 	border-top-style: solid;
 	border-right-style: solid;
 	border-left-style: solid;
@@ -101,8 +101,8 @@ div#banner h3 {
 }
 
 div#leftmenu {
-float:left;
-background: transparent;
+	float:left;
+	background: transparent;
 	border-style: none;
 	width: 18%;
 	margin-right: 10px;
@@ -124,13 +124,13 @@ div#leftmenu a {
 
 div#newsfeed {
 	padding:5px 0px 10px 0px;
-/* 	float:left; */
+	/* 	float:left; */
 	width:60%;
 	margin-left:20%; 
 }
 
 div#footer {
-clear:both;
+	clear:both;
 	color: #010103;
 	display: block;
 	padding: 10px 0px 0px;
@@ -146,20 +146,27 @@ div#footer a {
 	margin-right: 14px;
 }
 .newsItem {
-background-color:white;
-margin-bottom:10px;
-padding:5px;
-border-bottom:dotted;
-border-color: red;
+	background-color:white;
+	margin-bottom:10px;
+	padding:5px;
+	border-bottom:dotted;
+	border-color: red;
 
 }
 .newsItem  a:hover {
 	color:red;
 }
 .newsItem h1 a{
-font-size:20px;
+	font-size:20px;
 }
 
 form{
-text-align:center;
+	text-align:center;
+}
+#page-nav{
+	padding-top:20px;
+	text-align:right;
+}
+#current-page a{
+	text-decoration: none;
 }

@@ -1,14 +1,14 @@
 <?php
 session_start();
 
-	if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
-		include "admin/resources/adminlayout.php";
-	} else{
-		include "resources/layout.php";
-	}
+if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
+	include "admin/resources/adminlayout.php";
+} else{
+	include "resources/layout.php";
+}
 
 include "resources/class.database.php";
-	$userDB = new database;
+$userDB = new database;
 
 pageTop("CMS");
 
@@ -27,7 +27,7 @@ if(isset($_GET['post_id'])){
 <?php pageFinish(); ?>
 
 <footer>
-<p>&copy MySite 2013 </p>
+	<p>&copy MySite 2013 </p>
 </footer>
 
 <?php pageBottom(); ?>
