@@ -6,12 +6,5 @@ The markup and design is separate from the PHP and it is really easy to implemen
 
 There is still more work to be done to this, and I will be updating it accordingly. 
 
-TODO:
--Pagination
--Edit the PHP to be more Object-Oriented
--Change the css and html designs
--Create 'comment' section
-
-
 
 Feel free to look at the code and message me for any details. 
